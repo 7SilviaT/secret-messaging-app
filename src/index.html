@@ -14,18 +14,11 @@
   <body>
     <div class="row">
       <div class = "col s8 offset-s2">
-        <div id= "message-show" class= "card-pannel hide">
-          <h1></h1>
-          <div>
-            <a href="./index.html">Create your own secret message</a>
-          </div>
-          
-        </div>
-        <div id= "message-form" class= "card-panel">
+        <div id= "containerMessageToEncrypt" class= "card-panel">
           <form>
             <label>Enter a secret message</label>
-            <input id="message-form_input" autocomplete="off"/>
-            <button class="btn">Create</button>
+            <input id="inputMessageToEncrypt" autocomplete="off"/>
+            <button class="btn" type="submit">Create</button>
           </form>
         </div>
         <div id = "message-link" class = "card-panel hide">
@@ -33,6 +26,16 @@
             <label>Share this link with a friend</label>
             <input id="link-input"/>
           </div>
+          <div>
+            <a href="./index.html">Create another secret message</a>
+          </div>
+        </div>
+        <div id= "message-show" class= "card-pannel hide">
+          <h1></h1>
+          <div>
+            <a href="./index.html">Create your own secret message</a>
+          </div>
+          
         </div>
 
       </div>
