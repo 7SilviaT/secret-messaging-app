@@ -1,15 +1,15 @@
-const inputLink = document.querySelector("#link-input");
+const inputMessageLinkToShare = document.querySelector("#inputMessageLinkToShare");
 
 const validationForm = () =>{
-  const formInput = document.querySelector("#inputMessageToEncrypt");
-  const encryptedMessage = btoa(formInput.value);
-  if (formInput.value ===""){
+  const inputMessageToEncrypt = document.querySelector("#inputMessageToEncrypt");
+  const encryptedMessage = btoa(inputMessageToEncrypt.value);
+  if (inputMessageToEncrypt.value ===""){
     alert("Ingrese texto");
   }else{
-    inputLink.value = `${window.location}#${encryptedMessage}`;
-    document.querySelector("#message-link").classList.remove("hide");
+    inputMessageLinkToShare.value = `${window.location}#${encryptedMessage}`;
+    document.querySelector("#containerMessageLink").classList.remove("hide");
     document.querySelector("#containerMessageToEncrypt").classList.add("hide");
-    inputLink.select()
+    inputMessageLinkToShare.select()
   }
 }
 
@@ -23,9 +23,9 @@ const { hash } = window.location;
 const message = atob(hash.replace("#", ""));
 if(message){
   document.querySelector("#containerMessageToEncrypt").classList.add("hide");
-  document.querySelector("#message-show").classList.remove("hide");
+  document.querySelector("#containerDecryptedMessage").classList.remove("hide");
 
   document.querySelector("h1").innerHTML = message;
 }
 
-module.exports = validationForm;
+//module.exports = validationForm;

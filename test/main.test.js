@@ -9,7 +9,7 @@ expect(validationForm)
 }) */
 
 beforeEach(() => {
-  document.body.innerHTML = "<div id='containerMessageToEncrypt'></div>";
+  document.body = "<div id='containerMessageToEncrypt'></div>";
   validationForm();
 });
 
