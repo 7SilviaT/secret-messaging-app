@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Messaging App</title>
+    <style>
+      .row{
+        margin-top:25vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class = "col s8 offset-s2">
+        <div id= "containerMessageToEncrypt" class= "card-panel">
+          <form>
+            <label>Enter a secret message</label>
+            <input id="inputMessageToEncrypt" autocomplete="off"/>
+            <button class="btn" type="submit">Create</button>
+          </form>
+        </div>
+        <div id = "message-link" class = "card-panel hide">
+          <div>
+            <label>Share this link with a friend</label>
+            <input id="link-input"/>
+          </div>
+          <div>
+            <a href="./index.html">Create another secret message</a>
+          </div>
+        </div>
+        <div id= "message-show" class= "card-pannel hide">
+          <h1></h1>
+          <div>
+            <a href="./index.html">Create your own secret message</a>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
