@@ -12,6 +12,8 @@ document.querySelector("form").addEventListener("submit", event =>{
   inputLink.select()
 })
 
+
+
 const { hash } = window.location;
 
 const message = atob(hash.replace("#", ""));
