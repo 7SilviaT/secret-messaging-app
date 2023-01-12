@@ -9,12 +9,18 @@ expect(validationForm)
 }) */
 
 beforeEach(() => {
-  document.body = "<div id='containerMessageToEncrypt'></div>";
+  document.body.innerHTML = `<div id='containerMessageToEncrypt'>
+  <form>
+  <label>Enter a secret message</label>
+  <input id="inputMessageToEncrypt" autocomplete="off"/>
+  <button class="btn" type="submit">Create</button>
+</form>
+</div>`;
   validationForm();
 });
 
 describe('form should return validation function', () => {
-  it('Registra usuario de Google, ingresa, y lo lleva al Feed', () => {
+  it('retorna div', () => {
     const validationFormDiv = validationForm();
     const buttonForm = validationFormDiv.querySelector('.btn');
     buttonForm.dispatchEvent(new Event('click'));
