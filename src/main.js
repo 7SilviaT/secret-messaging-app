@@ -1,4 +1,5 @@
 const inputMessageLinkToShare = document.querySelector("#inputMessageLinkToShare");
+const formEvent = document.querySelector("form");
 
 const validationForm = () =>{
   const inputMessageToEncrypt = document.querySelector("#inputMessageToEncrypt");
@@ -17,6 +18,11 @@ document.querySelector("form").addEventListener("submit", event =>{
   event.preventDefault();
   validationForm();
 })
+
+window.addEventListener("load", function(event) 
+{
+	console.log("Web page fully Loaded. HTML, Javascript, CSS, Images, Iframes and objects are fully loaded.");
+});
 
 const { hash } = window.location;
 
